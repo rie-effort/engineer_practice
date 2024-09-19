@@ -16,9 +16,9 @@ main img {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
-  -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
-  transform: translate(-50%,-50%);/*センター寄せの修正*/
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
   color: #fff;
   font-size: 3.6rem;
   margin: 0;
@@ -41,7 +41,7 @@ header h1 {
   color: white;
 }
 li {
-  display: inline-block; /* float: left; をやめ、横並びにする */
+  display: inline-block;
 }
 a {
   text-decoration: none;
@@ -50,7 +50,7 @@ a {
 }
 nav {
   text-align: right;
-  margin-right: 20px; /* ナビゲーションの要素の間隔 */
+  margin-right: 20px;
   text-decoration: none;
 }
 
@@ -116,8 +116,8 @@ footer {
 
   .icon-container {
     display: flex;
-    gap: 10px; /* アイコン間の余白を調整 */
-    align-items: center; /* 縦方向の揃え */
+    gap: 10px;
+    align-items: center;
   }
 
   .github-logo {
@@ -176,3 +176,4 @@ footer {
     text-align: center;
   }
 }
+
