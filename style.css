@@ -4,8 +4,29 @@ body {
 }
 main img {
   width: 100%;
+  height: 650px;
   object-fit: cover;
 }
+
+.image {
+  position: relative;
+}
+
+.image p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  -webkit-transform: translate(-50%,-50%);/*ベンダープレフィックス*/
+  transform: translate(-50%,-50%);/*センター寄せの修正*/
+  color: #fff;
+  font-size: 3.6rem;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  font-weight: bold;
+}
+
 h1 {
   padding-left: 20px;
   color: aliceblue;
@@ -34,23 +55,30 @@ nav {
 }
 
 #about h2,
-#Bicycle h2 {
+#Works h2,
+#Skills h2 {
   font-size: 30px;
   text-align: center;
   text-decoration: underline;
 }
 .flex {
   display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: left; 
+  margin: 0 auto; 
 }
+
 .logo img {
   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  margin-right: 20px;
 }
+
 .flex .right {
-  margin: 0 20px 0 0;
-  padding: 0;
+  max-width: 600px;
 }
 .flex .title {
   margin-top: 50px;
@@ -62,33 +90,89 @@ nav {
   margin-top: 10px;
   padding: 0;
 }
-#Bicycle {
+#Works {
   text-align: center;
 }
-#Bicycle .flex {
+#Works .flex {
   justify-content: center;
 }
-#Bicycle img {
+#Works img {
   margin: 10px;
   width: 250px;
   height: 250px;
   object-fit: cover;
 }
-/* スマホ */
-@media screen and (max-width: 428px) {
-  #Bicycle img {
-    width: 100%;
-    height: auto;
+
+footer {
+    text-align: center;
+    background-color: #3333336e;
+    color: black;
+    padding: 20px;
   }
-  .logo img {
-    width: 100%;
-    height: auto;
+
+  footer p {
+    margin-bottom: 0;
   }
+
+  .icon-container {
+    display: flex;
+    gap: 10px; /* アイコン間の余白を調整 */
+    align-items: center; /* 縦方向の揃え */
+  }
+
+  .github-logo {
+    display: block;
+    margin-left: 0; 
+  }
+
+@media (max-width: 768px) {
+  /* スマホやタブレット用 */
+
+  .flex .right {
+    margin-left: 0;
+    text-align: center;
+  }
+
   .flex .title {
-    font-size: 16px;
+    margin-left: 20px;
+    margin-top: 60px;
+  }
+
+  .flex .text {
+    margin-left: 30px;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  #Works h2 {
+    text-align: center;
+  }
+
+  #Works .flex {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
   }
 }
-footer {
-  text-align: center;
-  color: black;
+
+@media (max-width: 480px) {
+  /* 小さい画面向けの調整 */
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li {
+    font-size: 1.2rem;
+  }
+
+  #mainvisual img {
+    max-height: 200px;
+  }
+
+  .flex {
+    text-align: center;
+  }
 }
